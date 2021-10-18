@@ -1,31 +1,35 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
         <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@600&family=Fraunces:wght@700;900&display=swap" rel="stylesheet">
 
 
   <link href="https://fonts.googleapis.com/css2?family=Exo:wght@900&display=swap" rel="stylesheet">
 
-        <title>Practice layout</title>
+        <title>Sunnyside Landing Page practice</title>
         <link rel="stylesheet" href="mystyles.css">
 
     </head>
-    <body>
+    <body role="main">
         <div class="header-wrapper">
             <div class="background-image">
-            <img src="images/logo.svg" alt="logo" class="logo">
+            <img src="images/logo.svg" alt="logo" class="logo" role="banner">
             
-            <nav>
+            <div class="slide-in">
+            <nav role="navigation">
                 <ul class="top-menu" id="menu">
-                    <li class="close-icon" id="close" onclick="closeDown()"><img src="images/hamburger_menu_close.png"></li>
+                    <li class="close-icon" id="close"><img src="images/hamburger_menu_close.png" alt="hamburger menu icon"></li>
                     <li class="top-list">About</li>
                     <li class="top-list">Services</li>
                     <li class="top-list">Projects</li>
                     <li class="top-list">Contact</li>
                 </ul>
-                <img src="images/icon-hamburger.svg" class="hamburger-icon" id="open" onclick="openDown()">
+              </div>
+                <img src="images/icon-hamburger.svg" alt="cross to close menu icon" class="hamburger-icon" id="open">
+              
               </nav>
 
             <h1>We are creative</h1>
