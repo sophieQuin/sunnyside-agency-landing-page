@@ -1,15 +1,29 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    
+}
+
 body {
     box-sizing: border-box;
-    width: 1442px;
-    margin-top: 0px;
     margin-left: auto;
     margin-right: auto;
+    padding: 0px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
     font-size: 18px;
+    /*overflow-x: hidden;*/
+    max-width: 1440px;
 }
 
 /*******************Header section*******************/
 .header-wrapper {
-    display: block;
+    position: relative;
+    top: 0px;
+    left: 0px;
+    width: 100%;
     height: 800px;
     margin: 0px;
 }
@@ -18,10 +32,8 @@ body {
     background-image: url('images/desktop/image-header.jpg');
     background-size: cover;
     background-position: center center;
-    position: absolute;
-    top: 0px;
-    width: 1442px;
     height: 800px;
+    width: 100%;
 }
 
 .logo {
@@ -97,13 +109,14 @@ h1 {
     color: #FFFFFF;
     text-transform: uppercase;
     display: flex;
-    width: 1440px;
     justify-content: center;
     font-family: Fraunces;
     font-weight: 900;
     font-size: 3.5em;
     letter-spacing: 8.75px;
 }
+
+
 
 
 
@@ -131,10 +144,10 @@ h1 {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    width: 415px;
+    width: 445px;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 15%;
+    margin-top: 100px;
 }
 .transform-message, .brand-message {
 
@@ -145,15 +158,18 @@ h2 {
     font-family: Fraunces, serif;
     font-weight: 900px;
     font-size: 2.5em;
+    margin-bottom: 32px;
+    width: 100%;
 }
 .message-wrapper p {
     font-family: Barlow, sans-serif;
     font-size: 1.125em;
-    line-height: 1.875em;
+    line-height: 30px;
     color: #808397;
+    height: 90px;
 }
 .message-wrapper button {
-    margin-top: 2.5em;
+    margin-top: 40px;
     font-family: Fraunces, serif;
     font-weight: 900;
     font-size: 1em;
@@ -168,12 +184,14 @@ text-align: center;
 width: 415px;
 margin-left: auto;
 margin-right: auto;
-margin-top: 19em;
+margin-top: 304px;
 }
 h3 {
     font-family: Fraunces, serif;
     font-weight: 900;
     font-size: 1.75em;
+    margin-top: 70px;
+    margin-bottom: 27px;
     color: #24554A;
 }
 
@@ -182,7 +200,7 @@ h3 {
     font-weight: 600;
     color: #3E7467;
     font-size: 1em;
-    line-height: 1.6875em;
+    line-height: 27px;
 }
 
 .desktop-photo {
@@ -233,7 +251,7 @@ button {
 /*******************Testimonials section*******************/
 
 .testmonials-section {
-    width: 1115px;
+    width: 100%;
     height: 777px;
 }
 .flex-container-testimonials {
@@ -260,7 +278,7 @@ h4 {
     font-family: Fraunces, serif;
     font-weight: 900;
     font-size: 1.25em;
-    letter-spacing: 0.3125em;
+    letter-spacing: 5px;
     color: #A7AAAD;
     text-transform: uppercase;
 }
@@ -269,7 +287,7 @@ blockquote {
     font-family: Barlow, sans-serif;
     font-weight: 600;
     font-size: 1.125em;
-    line-height: 2em;
+    line-height: 32px;
     color: #5B636D;
 }
 
@@ -313,7 +331,7 @@ blockquote {
 
 .footer-section {
     text-align: center;
-    height: 350px;
+    height: 400px;
     padding: 0px;
     margin-top: -44px;
     background-color: #90D4C6;
@@ -321,7 +339,7 @@ blockquote {
 
 .bottom-menu, .icon {
     list-style-type: none;
-    width: 400px;
+    width: 100%;
     margin-left: auto;
     margin-right: auto;
     padding: 0px;
@@ -329,15 +347,12 @@ blockquote {
 
 .bottom-list, .icon-list {
     display: inline-block;
-    padding: 0px;
+    padding: 30px;
 }
 .bottom-list {
     margin-bottom: 88px;
-    margin-left: 30px;
 }
-.bottom-list:first-child {
-    margin-left: 0px;
-}
+
 .icon-list {
     margin-left: 30px;
 }
@@ -373,14 +388,14 @@ blockquote {
 /*************************************************/
 
 
-@media screen and (max-device-width: 1024px) {
-    body {
-        width: 1024px;
+@media screen and (max-device-width: 1024px) {    
+    .message-wrapper {
+        width: 100%;
+        text-align: center;
     }
-    .background-image {
-        width: 1024px;
+    button {
+        width: 100%;
     }
-    
     #open {
         display: block;
         height: 50px;
@@ -400,15 +415,21 @@ blockquote {
         cursor: pointer;
     }
     
+    
+
     #menu {
         flex-direction: column;
-        display: none; /*JS: display: flex*/
+        display: flex; /*JS: display: flex*/
         text-align: center;
-        width: 150px;
+        width: 0px;
         top: 7px;
         background-color: #FFFFFF;
         border-top-left-radius: 10px;
         border-bottom-left-radius: 10px;
+        transition: .5s;
+        margin-right: 0px;
+        z-index: 1;
+        
     }
     .top-menu li:first-child {
         display: block;
@@ -427,20 +448,13 @@ blockquote {
         position: absolute;
         top: 100px;
         justify-content: start;
-        width: 1024px;
+    
     }
 }
 
 
 
-@media screen and (max-device-width: 768px) {
-    body {
-        width: 768px;
-    }
-    .background-image {
-        width: 768px;
-    }
-    
+@media screen and (max-device-width: 768px) {    
     #open {
         display: block;
         height: 50px;
@@ -487,23 +501,30 @@ blockquote {
         position: absolute;
         top: 100px;
         justify-content: start;
-        width: 768px;
+   
     }
 }
 
 @media screen and (max-device-width: 415px) {
-    body {
-        width: 415px;
-    }
     .background-image {
         background-image: url('images/mobile/image-header2.jpg');
-        width: 415px;
+    }
+
+    .graphic {
+        background-image: url('images/mobile/image-graphic-design2.jpg');
+        width: 374px;
 
     }
+    .photography {
+        background-image: url('images/mobile/image-photography2.jpg');
+        width: 374px;
+    }
+
+
     h1 {
         margin-top: 200px;
         font-size: 30px;
-        width: 200px;
+       /* width: 200px;*/
         margin-left: 40px;
     }
     #open {
@@ -532,7 +553,6 @@ blockquote {
         border-bottom-left-radius: 10px;
     }
    
-   
     li.top-list {
         font-family: Barlow, sans-serif;
         font-weight: 600;
@@ -550,5 +570,13 @@ blockquote {
         display: flex;
         justify-content: center;
     }
-    
+    .message-wrapper button {
+        margin-top: 150px;
+    }
+    .bottom-list, .icon-list {
+        padding: 5px;
+    }
+    .service-wrapper {
+        width: 370px;
+    }
 }
